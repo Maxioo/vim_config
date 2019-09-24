@@ -44,17 +44,19 @@ exec "nohlsearch"
 set smartcase
 
 " Noremap setting
-noremap J 5j
-noremap K 5k
+noremap J 7j
+noremap K 7k
 noremap = nzz
 noremap - Nzz
 noremap <LEADER><CR> :nohlsearch<CR>
+noremap e $
 
 " map setting
 map s <nop>
 map S :w<CR>
 map Q :q<CR>
 map R :source $MYVIMRC<CR>
+map <LEADER>rc :edit $MYVIMRC<CR>
 map ; :
 
 " windows split setting
@@ -148,3 +150,5 @@ call plug#end()
 " scheme
 colorscheme snazzy
 let g:SnazzyTransparent = 1
+
+map ff :NERDTreeToggle<CR>
