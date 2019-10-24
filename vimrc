@@ -5,7 +5,7 @@ filetype indent on
 filetype plugin on
 filetype plugin indent on
 
-set mouse=a
+" set mouse=a
 set encoding=utf-8
 let &t_ut=''
 set expandtab
@@ -20,9 +20,6 @@ set indentexpr=
 set backspace=indent,eol,start
 set foldmethod=indent
 set foldlevel=99
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 set laststatus=2
 set autochdir
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -95,7 +92,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
 
 " Error checking
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 
 " Auto Complete
 Plug 'Valloric/YouCompleteMe'
@@ -152,3 +149,4 @@ colorscheme snazzy
 let g:SnazzyTransparent = 1
 
 map ff :NERDTreeToggle<CR>
+map <LEADER>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
