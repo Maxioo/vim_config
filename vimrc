@@ -1,3 +1,18 @@
+" 
+"  __  __            _                __     ___           
+" |  \/  | __ ___  _(_) ___   ___     \ \   / (_)_ __ ___  
+" | |\/| |/ _` \ \/ / |/ _ \ / _ \ ____\ \ / /| | '_ ` _ \ 
+" | |  | | (_| |>  <| | (_) | (_) |_____\ V / | | | | | | |
+" |_|  |_|\__,_/_/\_\_|\___/ \___/       \_/  |_|_| |_| |_|
+"                                                          
+
+if empty(glob('~/.vim/plugged'))
+  " silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+  "   \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
 " Compatible
 set nocompatible
 filetype on
@@ -77,6 +92,12 @@ map <right> :vertical resize+5<CR>
 map tr :tabe<CR>
 map tj :+tabnext<CR>
 map tk :-tabnext<CR>
+
+" Call figlet
+map tx :r !figlet 
+
+" Duplicate words
+map <LEADER>fd /\(\<\w\+\>\)\_s*\1
 
 " Vim-plug
 call plug#begin('~/.vim/plugged')
