@@ -47,6 +47,7 @@ syntax on
 
 " Plug
 set relativenumber
+set number
 set cursorline
 set wrap
 set showcmd
@@ -160,6 +161,7 @@ Plug 'gcmt/wildfire.vim' " in Visual mode, type i' to select all text in '', or 
 Plug 'scrooloose/nerdcommenter' " in <space>cc to comment a line
 Plug 'jiangmiao/auto-pairs' " auto pairs
 Plug 'scrooloose/nerdcommenter' " comment
+Plug 'mhinz/vim-startify' " open gui
 
 " Dependencies
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -236,3 +238,39 @@ let g:SignatureMap = {
 " ===
 let g:undotree_DiffAutoOpen = 0
 map L :UndotreeToggle<CR>
+
+" ===
+" === Startify
+" ===
+noremap <LEADER>st :Startify<CR>
+
+" ===
+" === Compile
+" ===
+noremap <F5> :call CompileRunGcc()<CR>
+
+func! CompileRunGcc()
+    exec "w"
+    if &filetype == 'c'
+      exec "!g++ % -o %<"
+      exec "!time ./%<"
+    elseif &filetype == 'cpp'
+      exec "!g++ -std=c++11 % -Wall -o %<"
+      exec "!time ./%<"
+    elseif &filetype == 'java'
+      exec "!javac %"
+      exec "!time java %<"
+    elseif &filetype == 'sh'
+      :!time bash %
+    elseif &filetype == 'python'
+      silent! exec "!clear"
+      exec "!time python3 %"
+    elseif &filetype == 'html'
+      silent! exec "!chromium % &"
+    elseif &filetype == 'markdown'
+      exec "MarkdownPreview"
+    elseif &filetype == 'tex'
+      silent! exec "VimtexStop"
+      silent! exec "VimtexCompile"
+    endif
+endfunc
