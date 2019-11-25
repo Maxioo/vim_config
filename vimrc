@@ -116,7 +116,8 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
 " Plug 'w0rp/ale'
 
 " Auto Complete
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 
 " Undo Tree
 Plug 'mbbill/undotree/'
@@ -157,6 +158,7 @@ Plug 'tpope/vim-surround' " type ysks' to wrap the word with '' or type cs'` to 
 Plug 'godlygeek/tabular' " type ;Tabularize /= to align the =
 Plug 'gcmt/wildfire.vim' " in Visual mode, type i' to select all text in '', or type i) i] i} ip
 Plug 'scrooloose/nerdcommenter' " in <space>cc to comment a line
+Plug 'jiangmiao/auto-pairs' " auto pairs
 
 " Dependencies
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -226,7 +228,6 @@ let g:SignatureMap = {
         \ 'ListLocalMarks'     :  "m/",
         \ 'ListLocalMarkers'   :  "m?"
         \ }
-
 
 " ===
 " === Undotree
