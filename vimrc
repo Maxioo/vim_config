@@ -46,7 +46,7 @@ let mapleader=" "
 syntax on
 
 " Plug
-set norelativenumber 
+set relativenumber
 set cursorline
 set wrap
 set showcmd
@@ -90,8 +90,8 @@ map <left> :vertical resize-5<CR>
 map <right> :vertical resize+5<CR>
 
 map tr :tabe<CR>
-map tj :+tabnext<CR>
-map tk :-tabnext<CR>
+map tl :+tabnext<CR>
+map th :-tabnext<CR>
 
 " Call figlet
 map tx :r !figlet 
@@ -159,6 +159,7 @@ Plug 'godlygeek/tabular' " type ;Tabularize /= to align the =
 Plug 'gcmt/wildfire.vim' " in Visual mode, type i' to select all text in '', or type i) i] i} ip
 Plug 'scrooloose/nerdcommenter' " in <space>cc to comment a line
 Plug 'jiangmiao/auto-pairs' " auto pairs
+Plug 'scrooloose/nerdcommenter' " comment
 
 " Dependencies
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -187,7 +188,8 @@ let g:ycm_use_clangd = 0
 " ===
 " === Taglist
 " ===
-map <silent> T :TagbarOpenAutoClose<CR>   
+let g:tagbar_map_showproto = 'TT'
+nmap <silent><LEADER>t :TagbarOpenAutoClose<CR>
 
 " ===
 " === Python-syntax
