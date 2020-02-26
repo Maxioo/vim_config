@@ -56,6 +56,9 @@ set hlsearch
 exec "nohlsearch"
 set smartcase
 
+" JK for esc
+inoremap jk <ESC>
+
 " Noremap setting
 noremap J 7j
 noremap K 7k
@@ -117,8 +120,8 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
 " Plug 'w0rp/ale'
 
 " Auto Complete
-" Plug 'Valloric/YouCompleteMe'
-Plug 'ycm-core/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
+" Plug 'ycm-core/YouCompleteMe'
 
 " Undo Tree
 Plug 'mbbill/undotree/'
@@ -145,9 +148,9 @@ Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/indentpython.vim'
 
 " Markdown
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
-Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
-Plug 'vimwiki/vimwiki'
+" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
+" Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
+" Plug 'vimwiki/vimwiki'
 
 " Bookmarks
 Plug 'kshenoy/vim-signature'
