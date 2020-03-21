@@ -171,6 +171,8 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'kana/vim-textobj-user'
 Plug 'fadein/vim-FIGlet'
 
+Plug 'easymotion/vim-easymotion'
+
 call plug#end()
 
 " scheme
