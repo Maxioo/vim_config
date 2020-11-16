@@ -120,7 +120,7 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
 " Plug 'w0rp/ale'
 
 " Auto Complete
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 " Plug 'ycm-core/YouCompleteMe'
 
 " Undo Tree
@@ -146,6 +146,8 @@ Plug 'mattn/emmet-vim'
 
 " Python
 Plug 'vim-scripts/indentpython.vim'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Markdown
 " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
@@ -188,6 +190,8 @@ nnoremap <LEADER>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <LEADER>g/ :YcmCompleter GetDoc<CR>
 nnoremap <LEADER>gt :YcmCompleter GetType<CR>
 nnoremap <LEADER>gr :YcmCompleter GoToReferences<CR>
+let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
 let g:ycm_autoclose_preview_window_after_completion=0
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_use_clangd = 0
